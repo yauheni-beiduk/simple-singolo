@@ -95,6 +95,9 @@ margin: auto;
     display: flex;
 }
 
+.slider {
+    background-color: #f06c64;
+}
 /* Tools */
 .border__tools {
    background-color:  #FFFFFF;
@@ -128,6 +131,7 @@ h2 {
     color: #767E9E;
     margin-left: 40px;
     margin-right: 44px;
+   
 }
 
 .tool_h {
@@ -137,6 +141,7 @@ h2 {
     font-size: 18px;
     line-height: 18px;
     color: #666D89;
+    margin-top: 0;
 }
 
 .tool_text {
@@ -148,7 +153,7 @@ h2 {
     color: #767E9E;
     height: 77px;
     width: 220px;
-
+    margin-top: 0;
 }
 
 .layout-3-column {
@@ -162,6 +167,18 @@ h2 {
     margin-right: 40px;
 }
 
+.column_tool {
+    display: flex;
+    flex-direction: row;
+}
+
+.ico {
+    border: solid;
+    border-radius: 50%;
+    border-color: #666D89;
+    width: 60px;
+    height: 60px;
+}
 
 /* Portfolio */
 .portfolio {
@@ -179,7 +196,8 @@ h2 {
     border-radius: 5px;
     width: 95px;
     height: 12px;
-    
+    padding: 6px;
+    margin: 5px;
     text-align: center;
 }
 
