@@ -25,6 +25,10 @@ margin: auto;
     top: 0;
 }
 
+.burger {
+    display: none;
+}
+
 .border__header {
   background-color: #323746;
 }
@@ -122,6 +126,9 @@ background-color: #EA676B;;
     cursor: pointer;
 } 
 
+.slide-2 {
+    display: none;
+}
 
 /* Tools */
 .border__tools {
@@ -333,6 +340,8 @@ h2 {
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
+
+
     .portfolio_images {
         margin-left: 30px;
         padding-bottom: 42px;
@@ -343,6 +352,7 @@ h2 {
         grid-gap: 14px; 
     }
     
+
     .images:nth-child(n + 9) {
     display: none;
     }
@@ -362,7 +372,13 @@ h2 {
         display: none;
     }
     .header_mainLogo {
-        width: 100%;
         justify-content: center;
+    }
+
+    .burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px;
     }
 }
