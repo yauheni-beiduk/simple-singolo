@@ -11,19 +11,36 @@
     <link rel="stylesheet" href="script.js">
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
       <div class="wrapper header__wrapper">
-        <div class="burger"><img src="/images/burger/Burger-menu-icon.png" width="100%" alt="burger"></div>
+        <div class="burger"><img id="burgerImage" src="/images/burger/Burger-menu-icon.png" width="100%" alt="burger"></div>
         <div class="header_mainLogo">
           <h1>SINGOLO<span class="header_secondLogo">*</span></h1>
         </div>
         <nav class="header_navigation">
           <ul class="header_navigationList">
-            <li id="header_navigationList_Link" class="header_navigationList_Link"><a href="#"><span>HOME</span></a></li>
-            <li class="header_navigationList_Link"><a href="#tools">SERVICES</a></li>
-            <li class="header_navigationList_Link"><a href="#portfolio">PORTFOLIO</a> </li>
-            <li class="header_navigationList_Link"><a href="#portfolio">ABOUT</a></li>
-            <li class="header_navigationList_Link"><a href="#footer">CONTACT</a></li>
+            <li id="header_navigationList_Link" class="header_navigationList_Link"><a id="homeHeader" href="#"><span>HOME</span></a></li>
+            <li class="header_navigationList_Link"><a id="servicesHeader" href="#tools">SERVICES</a></li>
+            <li class="header_navigationList_Link"><a id="portfolioHeader" href="#portfolio">PORTFOLIO</a> </li>
+            <li class="header_navigationList_Link"><a id="aboutHeader" href="#">ABOUT</a></li>
+            <li class="header_navigationList_Link"><a id="contactHeader" href="#footer">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="wrapper header__wrapper-burger">
+        <div class="mainLogo-burger">
+           <div class="burger-burger"><img id="burger-burger" src="/images/burger/Burger-menu-icon.png" width="100%" alt="burger"></div>
+        <div class="header_mainLogo-burger">
+          <h1>SINGOLO<span class="header_secondLogo-burger">*</span></h1>
+        </div>
+      </div>
+        <nav class="header_navigation-burger">
+          <ul class="header_navigationList-burger">
+            <li  class="header_navigationList_Link-burger"><a id="homeBurger" href="#"><span>HOME</span></a></li>
+            <li  class="header_navigationList_Link-burger"><a id="servicesBurger" href="#tools">SERVICES</a></li>
+            <li  class="header_navigationList_Link-burger"><a id="portfolioBurger" href="#portfolio">PORTFOLIO</a></li>
+            <li class="header_navigationList_Link-burger"><a id="aboutBurger" href="#">ABOUT</a></li>
+            <li class="header_navigationList_Link-burger"><a id="contactBurger" href="#footer">CONTACT</a></li>
           </ul>
         </nav>
       </div>
@@ -33,7 +50,7 @@
     <section class="slider">
       <div class="wrapper">
           <div class="slider__wrapper">
-          <button class="slider_left"><img src="/images/Sliders/arrow-left.png" alt="left"></button>
+          <div class="slider_left"><img src="/images/Sliders/arrow-left.png" alt="left"></div>
           <div><img src="/images/Sliders/Slide-1.png" alt="slide-1" width="100%"/></div>
           <div class="slide-2"><img src="/images/Sliders/Slide-2.jpg" alt="slide-2" width="100%"></div>
           <div class="slider_right"><img src="/images/Sliders/arrow-right.png" alt="right"></div>
@@ -41,7 +58,8 @@
       </div>
     </section>
     <div class="border border__slider"></div>
-    <section id="tools" class="tools">
+    <section class="tools">
+      <div class="position" id="tools"></div>
       <div class="wrapper tools__wrapper">
         <h2>Our Services</h2>
         <p class="tools_text">
@@ -99,15 +117,16 @@
       </div>
       <div class="border border__tools"></div>
     </section>
-    <section id="portfolio" class="portfolio">
+    <section class="portfolio">
+      <div class="position" id="portfolio"></div>
       <div class="wrapper portfolio__wrapper">
         <h2>Portfolio</h2>
         <p class="tools_text"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <div class="portfolio_tags">
-          <span class="tag tag__selected">All</span>
-          <span class="tag tag__bordered">Web Design</span>
-          <span class="tag tag__bordered">Graphic Design</span>
-          <span class="tag tag__bordered">Artwork</span>
+          <span id="tagAll" class="tag tag__selected">All</span>
+          <span id="tagWebDesign" class="tag tag__bordered">Web Design</span>
+          <span id="tagGraphicDesign" class="tag tag__bordered">Graphic Design</span>
+          <span id="tagArtWork" class="tag tag__bordered">Artwork</span>
         </div>
         <div class="portfolio_images">
           <div class="images"><img src="/images/portfolio/portfolio-1.png" width="100%" alt="1" /></div>
