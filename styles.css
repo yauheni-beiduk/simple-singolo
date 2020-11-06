@@ -5,6 +5,7 @@ body{
     min-width: 375px;
 }
 
+
 .wrapper {
     width: 100%;
     max-width: 1020px;
@@ -125,14 +126,18 @@ background-color: #EA676B;;
 
 .slider_left:hover {
     cursor: pointer;
+    z-index: 1000;
 }
 
 .slider_right:hover {
     cursor: pointer;
 } 
 
-.slide-2 {
+.slideTwo {
     display: none;
+    position: absolute;
+    right: 111px;
+
 }
 
 /* Tools */
@@ -353,7 +358,7 @@ h2 {
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
 
-
+    
     .portfolio_images {
         margin-left: 30px;
         padding-bottom: 42px;
@@ -364,6 +369,7 @@ h2 {
         grid-gap: 14px; 
     }
     
+
 
     .images:nth-child(n + 9) {
     display: none;
@@ -396,8 +402,6 @@ h2 {
     }
 
 
-
-
     /* BURGER STYLES */
     .active .header__wrapper  {
        height: 63px;
@@ -425,7 +429,10 @@ h2 {
        flex-direction: column;
        justify-content: flex-start;
        align-items: flex-start;
+       z-index:2 
+       overflow: hidden;
    }
+   
 
    .active .mainLogo-burger {
        display: flex;
@@ -440,8 +447,8 @@ h2 {
     .active .burger-burger  {
         margin-left: 22px;
         cursor: pointer;
-        
-
+      
+    
     }
 
     .active .header_mainLogo-burger h1{
@@ -460,7 +467,7 @@ h2 {
         cursor: pointer;
         list-style-type: none;
         margin-top: 0;
-        padding-left: 78px;
+        padding-left: 40px;
         font-size: 24px;
         line-height: 29px;
         margin-bottom: 27px;
@@ -477,6 +484,10 @@ h2 {
         color: #f06c64;
         cursor: pointer;
     }
+
+
+  
+    
 }
 
 
@@ -493,3 +504,24 @@ h2 {
     border-color: #DEDEDE;
     color: #DEDEDE;
 }
+
+.changeImages {
+    display: grid;
+    order: 8;
+}
+
+
+
+/* ------------------------------------Sliders---------------------- */
+
+/* 
+.sliderActive .slideTwo {
+    display: flex;
+    position: absolute;
+    right: 111px;
+
+}
+
+.sliderActive .slideOne {
+    display: none;
+} */

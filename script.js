@@ -1,15 +1,15 @@
 
+                SLIDERS
+// const arrowLeft = document.querySelector('.slider_left img');
+// const arrowRight = document.querySelector('.slider_right img');
+// const slider = document.querySelector('#slider');
+// arrowLeft.addEventListener('click', () => {
+// slider.classList.add('sliderActive');
 
-const arrowLeft = document.querySelector('.slider_left img');
-const arrowRight = document.querySelector('.slider_right img');
 
-arrowLeft.addEventListener('click', () => {
-    alert('Slide');
-  });
+// });
 
-arrowRight.addEventListener('click', ()=> {
-  alert('Slide');
-});
+/* ------------------Burger Menu -------------------------*/
 
 
   const burgerButton = document.querySelector('#burgerImage');
@@ -23,6 +23,35 @@ arrowRight.addEventListener('click', ()=> {
   BurgerClose.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
   });
+ 
+  const homeBurger = document.querySelector('#homeBurger');
+  homeBurger.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+  });
+
+  const servicesBurger = document.querySelector('#servicesBurger');
+  servicesBurger.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+  });
+  
+  const portfolioBurger = document.querySelector('#portfolioBurger');
+  portfolioBurger.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+  });
+
+  const aboutBurger = document.querySelector('#aboutBurger');
+  aboutBurger.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+  });
+  
+  const contactBurger = document.querySelector('#contactBurger');
+  contactBurger.addEventListener('click', () => {
+    burgerMenu.classList.remove('active');
+  });
+
+  /*--------------------------Sort Images-----------------------*/ 
+  const imagesOne = document.querySelector('#imagesOne');
+
 
 
     /*-----------------------Portfolio tags---------------*/
@@ -31,25 +60,39 @@ arrowRight.addEventListener('click', ()=> {
     tagAll.addEventListener('click', () => {
       resetChangeColor();
     tagAll.classList.add('colorTag');
+    imagesOne.classList.toggle('changeImages');
     });
   
     const tagWebDesign = document.querySelector('#tagWebDesign');
     tagWebDesign.addEventListener('click', () => {
       resetChangeColor();
       tagWebDesign.classList.add('colorTag');
+      imagesOne.classList.toggle('changeImages');
     });
   
     const tagGraphicDesign = document.querySelector('#tagGraphicDesign');
     tagGraphicDesign.addEventListener('click', () => {
       resetChangeColor();
       tagGraphicDesign.classList.add('colorTag');
+      imagesOne.classList.toggle('changeImages');
     });
   
     const tagArtWork = document.querySelector('#tagArtWork');
     tagArtWork.addEventListener('click', () => {
       resetChangeColor();
       tagArtWork.classList.add('colorTag');
+      imagesOne.classList.toggle('changeImages');
     });
+
+
+
+
+
+
+
+
+
+
 
   /* -------------------Navigation Color-------------*/
 
@@ -85,14 +128,16 @@ arrowRight.addEventListener('click', ()=> {
     contactHeader.classList.add('changeColor');
   });
 
+
+
+
+
   function resetChangeColor() {
     homeHeader.classList.remove("changeColor");
     servicesHeader.classList.remove('changeColor');
     portfolioHeader.classList.remove('changeColor');
     aboutHeader.classList.remove('changeColor');
     contactHeader.classList.remove('changeColor');
-
-
 
     tagAll.classList.remove('colorTag');
     tagWebDesign.classList.remove('colorTag');
