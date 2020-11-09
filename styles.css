@@ -382,13 +382,16 @@ h2 {
     .footer_copiright {
     display: none;
     }
+
     .footer_links {
     width: 100%;
     justify-content: center;
     }
+
     .header_navigationList {
         display: none;
     }
+
     .header_mainLogo {
         justify-content: center;
     }
@@ -413,10 +416,12 @@ h2 {
    
    .active .burger{
        display: none;
+       
    }
    
    .active .header  {
        position: relative;
+      
    }
 
    .active .header__wrapper-burger  {
@@ -429,9 +434,7 @@ h2 {
        flex-direction: column;
        justify-content: flex-start;
        align-items: flex-start;
-       z-index:2 
-       overflow: hidden;
-       
+       z-index:2    
    }
    
 
@@ -450,7 +453,7 @@ h2 {
         cursor: pointer;
         transform: rotate(90deg);
         }
-    }
+    
 
     .active .header_mainLogo-burger h1{
         margin: 0;
@@ -472,7 +475,7 @@ h2 {
         font-size: 24px;
         line-height: 29px;
         margin-bottom: 27px;
-
+      
     }
     
     .active .header_navigation-burger a {
@@ -498,25 +501,19 @@ h2 {
   .active.body {
       overflow: hidden;
   }
+ 
+
 
 }
-
-
-
 
 
 
 
 /* --------------Java Script------------------------ */
 
-.header_navigationList a.changeColor {
-    color: #f06c64;
-}
 
-.portfolio__wrapper span.colorTag {
-    border-color: #DEDEDE;
-    color: #DEDEDE;
-}
+
+
 
 .changeImages {
     display: grid;
@@ -560,4 +557,14 @@ h2 {
 }
 .slider  .sliderActive  {
     background-color: #648BF0;
+}
+
+
+.header_navigationList .changeColor{
+    color: #f06c64;
+}
+
+.portfolio__wrapper .colorTag {
+    border-color: #DEDEDE;
+    color: #DEDEDE;
 }
