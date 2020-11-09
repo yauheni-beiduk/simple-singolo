@@ -1,8 +1,6 @@
 
   // --------------------------------SLIDERS
 
-
-
 const arrowLeft = document.querySelector('.slider_left img');
 const arrowRight = document.querySelector('.slider_right img');
 const slider = document.querySelector('#slider');
@@ -13,50 +11,49 @@ arrowRight.addEventListener('click', () => {
   slider.classList.toggle('sliderActive');
 });
 
-
-
 /* ------------------Burger Menu -------------------------*/
 
   const burgerButton = document.querySelector('#burgerImage');
   const burgerMenu = document.querySelector("#header");
   const body = document.querySelector('#body');
+  const BurgerClose = document.querySelector(".burger-burger");
+  const homeBurger = document.querySelector('#homeBurger');
+  const servicesBurger = document.querySelector('#servicesBurger');
+  const portfolioBurger = document.querySelector('#portfolioBurger');
+  const aboutBurger = document.querySelector('#aboutBurger');
+  const contactBurger = document.querySelector('#contactBurger');
+
   burgerButton.addEventListener('click', () => {
     burgerMenu.classList.toggle("active");
     body.classList.add('active');
   });
-  const BurgerClose = document.querySelector(".burger-burger");
+ 
   BurgerClose.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
     body.classList.remove('active');
   });
 
-  
-  const homeBurger = document.querySelector('#homeBurger');
   homeBurger.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
     body.classList.remove('active');
     
   });
 
-  const servicesBurger = document.querySelector('#servicesBurger');
   servicesBurger.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
     body.classList.remove('active');
   });
   
-  const portfolioBurger = document.querySelector('#portfolioBurger');
   portfolioBurger.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
     body.classList.remove('active');
   });
 
-  const aboutBurger = document.querySelector('#aboutBurger');
   aboutBurger.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
     body.classList.remove('active');
   });
   
-  const contactBurger = document.querySelector('#contactBurger');
   contactBurger.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
     body.classList.remove('active');
@@ -67,32 +64,33 @@ arrowRight.addEventListener('click', () => {
   /* -------------------Navigation Color-------------*/
 
 
-  const homeHeader = document.querySelector('#homeHeader') ;
+  const homeHeader = document.querySelector('#homeHeader');
+  const servicesHeader = document.querySelector('#servicesHeader');
+  const portfolioHeader = document.querySelector('#portfolioHeader');
+  const aboutHeader = document.querySelector('#aboutHeader');
+  const contactHeader = document.querySelector('#contactHeader') ;
+
+
   homeHeader.addEventListener('click', () => {
     resetChangeColor();
     homeHeader.classList.add('changeColor');
   });
 
-  const servicesHeader = document.querySelector('#servicesHeader') ;
   servicesHeader.addEventListener('click', () => {
     resetChangeColor();
     servicesHeader.classList.add('changeColor');
   });
 
-  const portfolioHeader = document.querySelector('#portfolioHeader') ;
   portfolioHeader.addEventListener('click', () => {
     resetChangeColor();
     portfolioHeader.classList.add('changeColor');
   });
 
-  const aboutHeader = document.querySelector('#aboutHeader') ;
   aboutHeader.addEventListener('click', () => {
     resetChangeColor();
     aboutHeader.classList.add('changeColor');
   });
 
-
-  const contactHeader = document.querySelector('#contactHeader') ;
   contactHeader.addEventListener('click', () => {
     resetChangeColor();
     contactHeader.classList.add('changeColor');
@@ -101,30 +99,29 @@ arrowRight.addEventListener('click', () => {
 
    /*--------------------------Sort Images-----------------------*/ 
    const imagesOne = document.querySelector('#imagesOne');
-
-
    const tagAll = document.querySelector('#tagAll');
+   const tagWebDesign = document.querySelector('#tagWebDesign');
+   const tagGraphicDesign = document.querySelector('#tagGraphicDesign');
+   const tagArtWork = document.querySelector('#tagArtWork');
+
    tagAll.addEventListener('click', () => {
      resetChangeColor();
    tagAll.classList.add('colorTag');
    imagesOne.classList.toggle('changeImages');
    });
  
-   const tagWebDesign = document.querySelector('#tagWebDesign');
    tagWebDesign.addEventListener('click', () => {
      resetChangeColor();
      tagWebDesign.classList.add('colorTag');
      imagesOne.classList.toggle('changeImages');
    });
  
-   const tagGraphicDesign = document.querySelector('#tagGraphicDesign');
    tagGraphicDesign.addEventListener('click', () => {
      resetChangeColor();
      tagGraphicDesign.classList.add('colorTag');
      imagesOne.classList.toggle('changeImages');
    });
  
-   const tagArtWork = document.querySelector('#tagArtWork');
    tagArtWork.addEventListener('click', () => {
      resetChangeColor();
      tagArtWork.classList.add('colorTag');
@@ -138,8 +135,6 @@ arrowRight.addEventListener('click', () => {
   const portfolio = document.getElementById("portfolioHeader");
   const about = document.getElementById("aboutHeader");
   const contact = document.getElementById("contactHeader");
- 
- 
  
  window.addEventListener("scroll", () => {
    if (window.pageYOffset >= 0 && window.pageYOffset < 365) {
@@ -166,9 +161,6 @@ arrowRight.addEventListener('click', () => {
  });
  
  
- 
-
-
  
 function resetChangeColor() {
   homeHeader.classList.remove('changeColor');
