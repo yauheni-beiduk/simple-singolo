@@ -1,28 +1,46 @@
 
-                SLIDERS
-// const arrowLeft = document.querySelector('.slider_left img');
-// const arrowRight = document.querySelector('.slider_right img');
-// const slider = document.querySelector('#slider');
-// arrowLeft.addEventListener('click', () => {
-// slider.classList.add('sliderActive');
+  // --------------------------------SLIDERS
 
 
-// });
+
+const arrowLeft = document.querySelector('.slider_left img');
+const arrowRight = document.querySelector('.slider_right img');
+const slider = document.querySelector('#slider');
+arrowLeft.addEventListener('click', () => {
+  resetChangeColor();
+slider.classList.toggle('sliderActive');
+});
+arrowRight.addEventListener('click', () => {
+  resetChangeColor();
+  slider.classList.toggle('sliderActive');
+});
+
 
 /* ------------------Burger Menu -------------------------*/
-
 
   const burgerButton = document.querySelector('#burgerImage');
   const burgerMenu = document.querySelector("#header");
   burgerButton.addEventListener('click', () => {
     burgerMenu.classList.toggle("active");
-   
   });
+
+  
+  
 
   const BurgerClose = document.querySelector(".burger-burger");
   BurgerClose.addEventListener('click', () => {
     burgerMenu.classList.remove('active');
   });
+
+  const body = document.querySelector('#body');
+  burgerButton.addEventListener('click', () => {
+    body.classList.add('active');
+  });
+
+  BurgerClose.addEventListener('click', () => {
+    body.classList.remove('active');
+  });
+ 
  
   const homeBurger = document.querySelector('#homeBurger');
   homeBurger.addEventListener('click', () => {
@@ -138,12 +156,47 @@
     portfolioHeader.classList.remove('changeColor');
     aboutHeader.classList.remove('changeColor');
     contactHeader.classList.remove('changeColor');
-
+ 
     tagAll.classList.remove('colorTag');
     tagWebDesign.classList.remove('colorTag');
     tagGraphicDesign.classList.remove('colorTag');
     tagArtWork.classList.remove('colorTag');
+
+    arrowLeft.classList.remove('sliderActive');
+    arrowRight.classList.remove('sliderActive');
+    body.classList.remove('active');
   };
 
 
- 
+  //  ---------------------Scroll-------------------
+ const home = document.getElementById("homeHeader");
+ const services = document.getElementById("servicesHeader");
+ const portfolio = document.getElementById("portfolioHeader");
+ const about = document.getElementById("aboutHeader");
+ const contact = document.getElementById("contactHeader");
+
+
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset >= 0 && window.pageYOffset < 365) {
+    home.classList.add("changeColor");
+    services.classList.remove("changeColor");
+    portfolio.classList.remove("changeColor");
+    about.classList.remove("changeColor");
+    contact.classList.remove("changeColor");
+  } else if (window.pageYOffset >= 500 && window.pageYOffset < 1000) {
+    services.classList.add("changeColor");
+    home.classList.remove("changeColor");
+    portfolio.classList.remove("changeColor");
+    about.classList.remove("changeColor");
+    contact.classList.remove("changeColor");
+  } else if (window.pageYOffset >= 754) {
+    services.classList.remove("changeColor");
+    home.classList.remove("changeColor");
+    portfolio.classList.add("changeColor");
+    about.classList.remove("changeColor");
+    contact.classList.remove("changeColor");
+  } else {
+    services.classList.remove("changeColor");
+  }
+});

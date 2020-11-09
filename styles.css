@@ -126,7 +126,7 @@ background-color: #EA676B;;
 
 .slider_left:hover {
     cursor: pointer;
-    z-index: 1000;
+    
 }
 
 .slider_right:hover {
@@ -357,8 +357,8 @@ h2 {
 }
 
 @media screen and (min-width: 320px) and (max-width: 768px) {
-
     
+  
     .portfolio_images {
         margin-left: 30px;
         padding-bottom: 42px;
@@ -431,6 +431,7 @@ h2 {
        align-items: flex-start;
        z-index:2 
        overflow: hidden;
+       
    }
    
 
@@ -447,8 +448,8 @@ h2 {
     .active .burger-burger  {
         margin-left: 22px;
         cursor: pointer;
-      
-    
+        transform: rotate(90deg);
+        }
     }
 
     .active .header_mainLogo-burger h1{
@@ -485,10 +486,22 @@ h2 {
         cursor: pointer;
     }
 
+     .active .burgerShadow {
+    background: #2D303A;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+   
+    }
+  .active.body {
+      overflow: hidden;
+  }
 
-  
-    
 }
+
+
 
 
 
@@ -514,14 +527,37 @@ h2 {
 
 /* ------------------------------------Sliders---------------------- */
 
-/* 
+
 .sliderActive .slideTwo {
-    display: flex;
+    display: contents;
     position: absolute;
     right: 111px;
-
+    width: 100%;
 }
 
 .sliderActive .slideOne {
     display: none;
-} */
+}
+ 
+
+
+
+.sliderActive .slider__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 50px;
+    background-color: #648BF0;
+}
+
+.sliderActive .border__slider {
+    background-color: #648BF0;
+}
+
+.sliderActive .slider {
+    background-color: #648BF0;
+}
+.slider  .sliderActive  {
+    background-color: #648BF0;
+}
