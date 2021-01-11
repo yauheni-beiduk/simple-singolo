@@ -49,14 +49,14 @@
     <div class="border border__header"></div>
     <main>
       <section id="slider" class="slider">
-        <div class="wrapper">
-            <div class="slider__wrapper">
-            <div class="slider_left"><img src="/images/Sliders/arrow-left.png" alt="left"></div>
-            <div class="slideOne"><img src="/images/Sliders/Slide-1.png" alt="slide-1" width="100%"/></div>
-            <div class="slideTwo"><img src="/images/Sliders/Slide-2.jpg" alt="slide-2" width="100%"></div>
-           <div class="slider_right"><img src="/images/Sliders/arrow-right.png" alt="right"></div>
-            </div>
-         </div>
+          <div class="slider__wrapper">
+              <div class="sliders">
+                  <img src="images/Sliders/slide1.jpg" alt="slide1" class="slider__photo">
+                  <img src="images/Sliders/slide2.jpg" alt="slide2" class="slider__photo">
+              </div>
+              <img src="images/Sliders/arrow-left.png" alt="left" class="slider__arrow slider__arrow--left">
+              <img src="images/Sliders/arrow-right.png" alt="right" class="slider__arrow slider__arrow--right">
+          </div>
      </section>
      <div class="border border__slider"></div>
      <section class="tools">
@@ -123,26 +123,26 @@
       <div class="wrapper portfolio__wrapper">
         <h2>Portfolio</h2>
         <p class="tools_text"> Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-        <div class="portfolio_tags">
-          <span id="tagAll" class="tag">All</span>
-          <span id="tagWebDesign" class="tag">Web Design</span>
-          <span id="tagGraphicDesign" class="tag">Graphic Design</span>
-          <span id="tagArtWork" class="tag">Artwork</span>
-        </div>
-        <div class="portfolio_images">
-          <div id="imagesOne" class="images"><img src="/images/portfolio/portfolio-1.png" width="100%" alt="1" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-2.png" width="100%" alt="2" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-3.png" width="100%" alt="3" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-4.png" width="100%" alt="4" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-5.png" width="100%" alt="5" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-6.png" width="100%" alt="6" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-7.png" width="100%" alt="7" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-8.png" width="100%" alt="8" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-9.png" width="100%" alt="9" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-10.png" width="100%" alt="10" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-11.png" width="100%" alt="11" /></div>
-          <div class="images"><img src="/images/portfolio/portfolio-12.png" width="100%" alt="12" /></div>
-        </div>
+        <ul class="portfolio_tags">
+          <li id="tagAll" class="tag" data-id="all">All</li>
+          <li id="tagWebDesign" class="tag" data-id="web">Web Design</li>
+          <li id="tagGraphicDesign" class="tag" data-id="design">Graphic Design</;>
+          <li id="tagArtWork" class="tag" data-id="art">Artwork</li>
+        </ul>
+        <section class="portfolio_images">
+          <img class="activ images" src="/images/portfolio/portfolio-1.png" width="100%" alt="1" data-id="web" />
+          <img class="activ images" src="/images/portfolio/portfolio-2.png" width="100%" alt="2" data-id="web" />
+          <img class="activ images" src="/images/portfolio/portfolio-3.png" width="100%" alt="3" data-id="design"/>
+          <img class="activ images" src="/images/portfolio/portfolio-4.png" width="100%" alt="4" data-id="web"/>
+          <img class="activ images" src="/images/portfolio/portfolio-5.png" width="100%" alt="5" data-id="web"/>
+          <img class="activ images" src="/images/portfolio/portfolio-6.png" width="100%" alt="6"  data-id="design"/>
+          <img class="activ images" src="/images/portfolio/portfolio-7.png" width="100%" alt="7" data-id="art"/>
+          <img class="activ images" src="/images/portfolio/portfolio-8.png" width="100%" alt="8" data-id="art"/>
+          <img class="activ images" src="/images/portfolio/portfolio-9.png" width="100%" alt="9" data-id="art"/>
+          <img class="activ images" src="/images/portfolio/portfolio-10.png" width="100%" alt="10"  data-id="design"/>
+          <img class="activ images"" src="/images/portfolio/portfolio-11.png" width="100%" alt="11"  data-id="art"/>
+          <img class="activ images"" src="/images/portfolio/portfolio-12.png" width="100%" alt="12"  data-id="design"/>
+        </section>
       </div>
      </section>
      <div class="border border__portfolio"></div>

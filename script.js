@@ -1,16 +1,48 @@
 
   // --------------------------------SLIDERS
 
-const arrowLeft = document.querySelector('.slider_left img');
-const arrowRight = document.querySelector('.slider_right img');
-const slider = document.querySelector('#slider');
-arrowLeft.addEventListener('click', () => {
-slider.classList.toggle('sliderActive');
-});
-arrowRight.addEventListener('click', () => {
-  slider.classList.toggle('sliderActive');
-});
-
+  const arrowLeft = document.querySelector('.slider__arrow--left');
+  const arrowRight = document.querySelector('.slider__arrow--right');
+  const sliders = document.querySelector('.sliders');
+  const images = document.querySelectorAll('.slider__photo');
+  
+  let counter = 0;
+  images[counter].style.display = 'block';
+  arrowRight.addEventListener('click', () => {
+    let nextIndex = counter + 1;
+  
+    if (nextIndex >= images.length) {
+      nextIndex = 0;
+    }
+  
+    const next = images[nextIndex];
+    sliders.append(next);
+    next.style.display = 'block';
+    next.style.animation = 'moveRight 1s';
+  
+    counter += 1;
+    if (counter >= images.length) {
+      counter = 0;
+    }
+  });
+  
+  arrowLeft.addEventListener('click', () => {
+    let prevIndex = counter - 1;
+  
+    if (prevIndex < 0) {
+      prevIndex = images.length - 1;
+    }
+  
+    const prev = images[prevIndex];
+    sliders.append(prev);
+    prev.style.display = 'block';
+    prev.style.animation = 'moveLeft 1s';
+  
+    counter -= 1;
+    if (counter < 0) {
+      counter = images.length - 1;
+    }
+  });
 /* ------------------Burger Menu -------------------------*/
 
   const burgerButton = document.querySelector('#burgerImage');
@@ -98,36 +130,31 @@ arrowRight.addEventListener('click', () => {
 
 
    /*--------------------------Sort Images-----------------------*/ 
-   const imagesOne = document.querySelector('#imagesOne');
-   const tagAll = document.querySelector('#tagAll');
-   const tagWebDesign = document.querySelector('#tagWebDesign');
-   const tagGraphicDesign = document.querySelector('#tagGraphicDesign');
-   const tagArtWork = document.querySelector('#tagArtWork');
 
-   tagAll.addEventListener('click', () => {
-     resetChangeColor();
-   tagAll.classList.add('colorTag');
-   imagesOne.classList.toggle('changeImages');
-   });
- 
-   tagWebDesign.addEventListener('click', () => {
-     resetChangeColor();
-     tagWebDesign.classList.add('colorTag');
-     imagesOne.classList.toggle('changeImages');
-   });
- 
-   tagGraphicDesign.addEventListener('click', () => {
-     resetChangeColor();
-     tagGraphicDesign.classList.add('colorTag');
-     imagesOne.classList.toggle('changeImages');
-   });
- 
-   tagArtWork.addEventListener('click', () => {
-     resetChangeColor();
-     tagArtWork.classList.add('colorTag');
-     imagesOne.classList.toggle('changeImages');
-   });
-
+const tags = document.getElementsByClassName('tag');
+   for (let i = 0; i < tags.length; i++) {
+     tags[0].classList.add('activ');
+    tags[i].onclick = tabclick
+  };
+  
+  const imageNodes = document.querySelectorAll('section > img');
+  
+  function tabclick(event) {
+    let tag = event.target;
+    let tagId = tag.dataset.id;
+  
+    for (let i = 0; i < tags.length; i++) {
+      tags[i].classList.remove('activ');
+    }
+    this.classList.add('activ');
+    imageNodes.forEach(img => {
+      if (img.dataset.id === tagId || tagId === 'all') {
+        return img.classList.add('activ')
+      } else {
+         return img.classList.remove('activ')
+      }
+    });
+  };
 
   //  ---------------------Scroll-------------------
   const home = document.getElementById("homeHeader");
@@ -168,15 +195,6 @@ function resetChangeColor() {
   portfolioHeader.classList.remove('changeColor');
   aboutHeader.classList.remove('changeColor');
   contactHeader.classList.remove('changeColor');
-
-  tagAll.classList.remove('colorTag');
-  tagWebDesign.classList.remove('colorTag');
-  tagGraphicDesign.classList.remove('colorTag');
-  tagArtWork.classList.remove('colorTag');
-
-  arrowLeft.classList.remove('sliderActive');
-  arrowRight.classList.remove('sliderActive');
-  body.classList.remove('active');
 };
 
 
